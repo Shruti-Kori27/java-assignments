@@ -1,10 +1,13 @@
 public class ReverseString {
     public static void main(String[] args) {
-        String inputStr = "Reverse String!!!";
+        String inputStr = args[0];
         System.out.println("Original String::" + inputStr + " Reversed String::" + reverse(inputStr));
     }
 
     private static String reverse(String inputStr) {
+        // Validate input string
+        if (inputStr == null || inputStr.isEmpty())
+            return inputStr;
 
         char[] chars = inputStr.toCharArray();
         int leftIndex = 0;

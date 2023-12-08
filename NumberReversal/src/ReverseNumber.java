@@ -1,6 +1,10 @@
 public class ReverseNumber {
     public static void main(String[] args) {
-        int inputNumber = 123456;
+        String inputNumberStr = args[0];
+        if (inputNumberStr == null || inputNumberStr.isEmpty())
+            return;
+
+        int inputNumber = Integer.parseInt(inputNumberStr);
         System.out.println("Original Number::" + inputNumber + " Reversed Number::" + reverse(inputNumber));
     }
 
